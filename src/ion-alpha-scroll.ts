@@ -160,4 +160,7 @@ export class IonAlphaScroll {
     return index;
   }
 
+  getContent(): Content {
+    return this._content;
+  }
 }
