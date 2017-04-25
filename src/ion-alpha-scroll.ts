@@ -3,12 +3,11 @@ import {
   Host,
   Input,
   ElementRef,
-  ViewChild,
   ViewContainerRef,
   SimpleChange
 } from '@angular/core';
 import { CSSEscape } from './util-classes';
-import { Content, Scroll } from 'ionic-angular';
+import { Content } from 'ionic-angular';
 import * as _ from 'lodash';
 
 @Component({
@@ -30,6 +29,7 @@ export class IonAlphaScroll {
   alphaScrollTemplate: string;
 
   constructor(@Host() private _content: Content, private _elementRef: ElementRef, private vcRef: ViewContainerRef) {
+    console.log(vcRef);
   }
 
   ngOnInit() {
@@ -75,6 +75,7 @@ export class IonAlphaScroll {
   }
 
   ngOnChanges(changes: {[propertyName: string]: SimpleChange}) {
+    console.log(changes);
     let tmp: any = {};
     for (let i = 0; i < this.listData.length; i++) {
       let listValue: any = _.get(this.listData[i], this.key);
@@ -157,10 +158,8 @@ export class IonAlphaScroll {
   }
 
   trackBySortedItems(index: number, item: any): number {
+    console.log(item);
     return index;
   }
 
-  getContent(): Content {
-    return this._content;
-  }
 }
