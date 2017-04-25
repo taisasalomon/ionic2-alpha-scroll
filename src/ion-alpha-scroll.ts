@@ -29,7 +29,7 @@ export class IonAlphaScroll {
   alphaScrollTemplate: string;
 
   constructor(@Host() private _content: Content, private _elementRef: ElementRef, private vcRef: ViewContainerRef) {
-    console.log(vcRef);
+    console.log(this.vcRef);
   }
 
   ngOnInit() {
