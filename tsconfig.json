@@ -4,13 +4,13 @@
     "declaration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": ["dom", "es2015"],
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": false,
     "removeComments": false,
     "sourceMap": true,
-    "target": "es5"
+    "target": "es5",
+    "skipLibCheck": true
   },
   "files": [
     "src/ion-alpha-scroll.ts",
